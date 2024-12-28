@@ -1,5 +1,8 @@
+import { useState } from 'react'
 import { cn } from '../../lib/utils'
 import { BackgroundGradientAnimation } from './background-gradient-animation'
+import Lottie from 'react-lottie'
+import animationData from './../../data/confetti.json'
 
 export const BentoGrid = ({ className, children }) => {
   return (
@@ -25,6 +28,7 @@ export const BentoGridItem = ({
   imgClassName,
   titleClassName,
 }) => {
+  const [copied, setCopied] = useState(false)
   return (
     <div
       className={cn(
@@ -71,6 +75,20 @@ export const BentoGridItem = ({
         <div className="self-end group-hover/bento:translate-x-2 transition duration-200">
           {icon}
         </div>
+        {id === 3 && (
+          <div className="mt-5 relative">
+            <div className="absolute -bottom-5 right-0">
+              <Lottie
+                options={{
+                  loop: copied,
+                  autoplay: copied,
+                  animationData,
+                  rendererSettings: { preserveAspectRatio: 'xMidYMid slice' },
+                }}
+              />
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )
