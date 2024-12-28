@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #1a1a1a;
+}
+.profilePhoto {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid;
+  background-color: #1c1b1b;
+}
+.text-black {
+  color: aliceblue;
+}
+#gradLine {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #ffffff 0%,
+    hsl(0, 0%, 32%) 41.08108108108108%,
+    hsl(0, 0%, 39%) 54.26430092201578%,
+    hsl(0, 0%, 17%) 90.54054054054053%
+  );
+  flex: none;
+  height: 2px;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
