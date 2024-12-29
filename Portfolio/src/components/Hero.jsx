@@ -79,7 +79,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div id="gradLine"></div>
+      <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent absolute left-0 h-[1px] w-full" />
+
       <ShootingStars />
     </div>
   )

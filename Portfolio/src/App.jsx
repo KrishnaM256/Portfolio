@@ -2,6 +2,8 @@ import { useState } from 'react'
 import Hero from './components/Hero'
 import About from './components/About'
 import Skills from './components/Skills'
+import Contact from './components/Contact'
+import Projects from './components/Projects'
 function App() {
   return (
     <>
@@ -11,6 +13,9 @@ function App() {
         </div>
         <About></About>
         <Skills></Skills>
+        <Projects></Projects>
+        <Contact></Contact>
+        <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full " />
       </main>
     </>
   )
