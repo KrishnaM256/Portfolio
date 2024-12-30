@@ -5,6 +5,7 @@ import Lottie from 'react-lottie'
 import animationData from './../../data/confetti.json'
 import { HoverBorderGradient } from './hover-border-gradient'
 import { MdOutlineFileDownload } from 'react-icons/md'
+import resume from './../../assets/Krishna_Magar_Resume.pdf'
 
 export const BentoGrid = ({ className, children }) => {
   return (
@@ -64,54 +65,57 @@ export const BentoGridItem = ({
               )}
             />
             <div className="my-6 relative flex justify-center text-center">
-              <HoverBorderGradient
-                containerClassName="rounded-full"
-                as="button"
-                className="bg-black-200 text-white flex items-center space-x-2 "
-              >
-                <MdOutlineFileDownload />
-                <span>Download CV</span>
-              </HoverBorderGradient>
+              <a href={resume} download={'Krishna_Magar_Resume'}>
+                <HoverBorderGradient
+                  containerClassName="rounded-full"
+                  as="button"
+                  className="bg-black-200 relative text-white flex items-center space-x-2 "
+                >
+                  <MdOutlineFileDownload /> Download CV
+                </HoverBorderGradient>
+              </a>
             </div>
           </>
         )}
       </div>
-      <div className="relative z-10 flex flex-col justify-between h-full p-6 space-y-4">
-        {/* Title and Description */}
-        <div>
-          {title && (
-            <h3
-              className={cn(
-                'text-xl font-bold text-white mb-2',
-                titleClassName
-              )}
-            >
-              {title}
-            </h3>
-          )}
-          {description && (
-            <p className="text-neutral-400 text-lg">{description}</p>
-          )}
-        </div>
-        {/* Icon */}
-        <div className="self-end group-hover/bento:translate-x-2 transition duration-200">
-          {icon}
-        </div>
-        {id === 6 && (
-          <div className="mt-5 relative" onClick={() => setCopied(!copied)}>
-            <div className="absolute -bottom-5 right-0">
-              <Lottie
-                options={{
-                  loop: copied,
-                  autoplay: copied,
-                  animationData,
-                  rendererSettings: { preserveAspectRatio: 'xMidYMid slice' },
-                }}
-              />
-            </div>
+      {id !== 1 && (
+        <div className="relative z-10 flex flex-col justify-between h-full p-6 space-y-4">
+          {/* Title and Description */}
+          <div>
+            {title && (
+              <h3
+                className={cn(
+                  'text-xl font-bold text-white mb-2',
+                  titleClassName
+                )}
+              >
+                {title}
+              </h3>
+            )}
+            {description && (
+              <p className="text-neutral-400 text-lg">{description}</p>
+            )}
           </div>
-        )}
-      </div>
+          {/* Icon */}
+          <div className="self-end group-hover/bento:translate-x-2 transition duration-200">
+            {icon}
+          </div>
+          {id === 6 && (
+            <div className="mt-5 relative" onClick={() => setCopied(!copied)}>
+              <div className="absolute -bottom-5 right-0">
+                <Lottie
+                  options={{
+                    loop: copied,
+                    autoplay: copied,
+                    animationData,
+                    rendererSettings: { preserveAspectRatio: 'xMidYMid slice' },
+                  }}
+                />
+              </div>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   )
 }

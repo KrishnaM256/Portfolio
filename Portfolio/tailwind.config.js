@@ -1,3 +1,4 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
 import svgToDataUri from 'mini-svg-data-uri'
 import colors from 'tailwindcss/colors'
 import { default as flattenColorPalette } from 'tailwindcss/lib/util/flattenColorPalette'
@@ -29,6 +30,7 @@ export default {
           100: '#1a1a1a',
           200: 'rgba(45, 28, 24,0.1)',
           300: 'rgba(255, 255, 255, 0.125)',
+          400: 'rgb(34 28 28 / 71%)',
         },
         white: {
           DEFAULT: '#FFF',

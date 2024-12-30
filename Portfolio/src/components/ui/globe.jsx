@@ -21,14 +21,14 @@ export function Globe({ globeConfig, data }) {
 
   const defaultProps = {
     pointSize: 1,
-    atmosphereColor: '#ffffff',
+    atmosphereColor: '#4a90e2', // Soft blue atmosphere
     showAtmosphere: true,
-    atmosphereAltitude: 0.1,
-    polygonColor: 'rgba(255,255,255,0.7)',
-    globeColor: '#1d072e',
-    emissive: '#000000',
-    emissiveIntensity: 0.1,
-    shininess: 0.9,
+    atmosphereAltitude: 0.2,
+    polygonColor: 'rgba(255,255,255,0.1)', // Subtle polygon color
+    globeColor: '#1e3a8a', // Blue globe color
+    emissive: '#000044', // Subtle dark blue emissive
+    emissiveIntensity: 0.2,
+    shininess: 0.7, // Softer shine
     arcTime: 2000,
     arcLength: 0.9,
     rings: 1,
@@ -172,7 +172,7 @@ export function WebGLRendererConfig() {
   useEffect(() => {
     gl.setPixelRatio(window.devicePixelRatio)
     gl.setSize(size.width, size.height)
-    gl.setClearColor(0xffaaff, 0)
+    gl.setClearColor('#1a1a1a', 0)
   }, [])
 
   return null

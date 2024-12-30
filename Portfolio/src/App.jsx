@@ -1,22 +1,22 @@
 import { useState } from 'react'
-import Hero from './components/Hero'
-import About from './components/About'
-import Skills from './components/Skills'
-import Contact from './components/Contact'
-import Projects from './components/Projects'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './components/Home'
+import Project from './components/Project'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import ScrollToTop from './lib/ScrollToTop'
 function App() {
   return (
     <>
-      <main className="relative text-white bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5 mb-10">
-        <div className="max-w-7xl w-full">
-          <Hero></Hero>
-        </div>
-        <About></About>
-        <Skills></Skills>
-        <Projects></Projects>
-        <Contact></Contact>
-        <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full " />
-      </main>
+      <BrowserRouter>
+        <Navbar></Navbar>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Home></Home>}></Route>
+          <Route path="/project/:id" element={<Project></Project>}></Route>
+        </Routes>
+        <Footer></Footer>
+      </BrowserRouter>
     </>
   )
 }

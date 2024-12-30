@@ -6,10 +6,11 @@ import { HoverBorderGradient } from './ui/hover-border-gradient'
 import { FaRegPaperPlane } from 'react-icons/fa6'
 import { FlipWords } from './ui/flip-words'
 import { ShootingStars } from './ui/shooting-stars'
+import { HashLink } from 'react-router-hash-link'
 
 const Hero = () => {
   return (
-    <div className="pb-20 w-full">
+    <div className="pb-0 w-full">
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -67,14 +68,16 @@ const Hero = () => {
               Developer and AI & ML enthusiast.
             </p>
             <div className="my-6 flex justify-center text-center">
-              <HoverBorderGradient
-                containerClassName="rounded-full"
-                as="button"
-                className="bg-black text-white flex items-center space-x-2"
-              >
-                <FaRegPaperPlane />
-                <span>Contact me</span>
-              </HoverBorderGradient>
+              <HashLink to={'#contact'} smooth>
+                <HoverBorderGradient
+                  containerClassName="rounded-full"
+                  as="button"
+                  className="bg-black text-white flex items-center space-x-2"
+                >
+                  <FaRegPaperPlane />
+                  <span>Contact me</span>
+                </HoverBorderGradient>
+              </HashLink>
             </div>
           </div>
         </div>

@@ -1,15 +1,17 @@
 'use client'
-import React, { Suspense } from 'react'
+import React, { Suspense, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { Label } from './ui/label'
 import { Input } from './ui/input'
 import { cn } from '../lib/utils'
+import emailjs from '@emailjs/browser'
 
 const World = React.lazy(() =>
   import('./ui/globe').then((m) => ({ default: m.World }))
 )
 
 const Contact = () => {
+  const form = useRef()
   const globeConfig = {
     pointSize: 4,
     globeColor: '#062056',
@@ -395,8 +397,25 @@ const Contact = () => {
       color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
   ]
+  const sendMail = (e) => {
+    e.preventDefault()
+
+    emailjs
+      .sendForm('service_0tzkhbs', 'template_h9xkvhj', form.current, {
+        publicKey: 'k5ZcP6m8WOhz0pg5X',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!')
+        },
+        (error) => {
+          console.log('FAILED...', error.text)
+        }
+      )
+    e.target.reset()
+  }
   return (
-    <section id="contact" className="w-full relative">
+    <section id="contact" className="w-full relative mt-5">
       <h2 className="text-4xl my-5 mt-12 text-center text-white">Contact Me</h2>
       <div className="w-full flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
         {/* Globe Container */}
@@ -418,20 +437,39 @@ const Contact = () => {
             <World data={sampleArcs} globeConfig={globeConfig} />
           </motion.div>
         </div>
-        <form className="w-full max-w-[600px] bg-black rounded-lg p-6">
+        <form
+          className="w-full max-w-[600px] bg-black rounded-lg p-6"
+          ref={form}
+          onSubmit={sendMail}
+        >
           <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
             <LabelInputContainer>
-              <Label htmlFor="firstname">First name</Label>
-              <Input id="firstname" placeholder="ex., John" type="text" />
+              <Label htmlFor="from_fname">First name</Label>
+              <Input
+                id="from_fname"
+                placeholder="ex., John"
+                type="text"
+                name="from_fname"
+              />
             </LabelInputContainer>
             <LabelInputContainer>
-              <Label htmlFor="lastname">Last name</Label>
-              <Input id="lastname" placeholder="ex., Doe" type="text" />
+              <Label htmlFor="from_lname">Last name</Label>
+              <Input
+                id="from_lname"
+                placeholder="ex., Doe"
+                type="text"
+                name="from_lname"
+              />
             </LabelInputContainer>
           </div>
           <LabelInputContainer className="mb-4">
-            <Label htmlFor="email">Email Address</Label>
-            <Input id="email" placeholder="example@gmail.com" type="email" />
+            <Label htmlFor="from_email">Email Address</Label>
+            <Input
+              id="from_email"
+              placeholder="example@gmail.com"
+              type="email"
+              name="from_email"
+            />
           </LabelInputContainer>
           <LabelInputContainer className="mb-4">
             <Label htmlFor="message">Message</Label>
@@ -440,6 +478,7 @@ const Contact = () => {
               multiline={true}
               placeholder="Type message..."
               type="text"
+              name="message"
             />
           </LabelInputContainer>
           <button

@@ -64,7 +64,7 @@ const About = () => {
 
   return (
     <section id="about">
-      <h2 className="text-4xl mb-5 text-center text-slate-200">About Me</h2>
+      <h2 className="text-4xl my-5 mt-12 text-center text-white">About Me</h2>
       <BentoGrid>
         {items.map((item, i) => (
           <BentoGridItem

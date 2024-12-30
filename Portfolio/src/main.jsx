@@ -7,13 +7,11 @@ import App from './App'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
-      {/* <BackgroundBeamsDemo></BackgroundBeamsDemo> */}
-      {/* <SpotlightPreview></SpotlightPreview> */}
-      {/* <AuroraBackgroundDemo></AuroraBackgroundDemo> */}
-      {/* <BackgroundGradientAnimationDemo></BackgroundGradientAnimationDemo> */}
-      {/* <HeroHighlightDemo></HeroHighlightDemo> */}
-      <App></App>
-    </BrowserRouter>
+    {/* <BackgroundBeamsDemo></BackgroundBeamsDemo> */}
+    {/* <SpotlightPreview></SpotlightPreview> */}
+    {/* <AuroraBackgroundDemo></AuroraBackgroundDemo> */}
+    {/* <BackgroundGradientAnimationDemo></BackgroundGradientAnimationDemo> */}
+    {/* <HeroHighlightDemo></HeroHighlightDemo> */}
+    <App></App>
   </React.StrictMode>
 )
