@@ -419,7 +419,7 @@ const Contact = () => {
       <h2 className="text-4xl my-5 mt-12 text-center text-white">Contact Me</h2>
       <div className="w-full flex flex-col md:flex-row justify-center items-center space-y-8 md:space-y-0 md:space-x-8">
         {/* Globe Container */}
-        <div className="flex justify-center items-center w-full max-w-[700px] h-[500px] bg-black-100 relative">
+        <div className="flex justify-center items-center w-screen  max-w-[700px] h-[500px] bg-black-100 relative">
           <motion.div
             initial={{
               opacity: 0,

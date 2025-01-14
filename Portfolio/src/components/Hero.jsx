@@ -36,9 +36,9 @@ const Hero = () => {
       >
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
         <div className="flex justify-center">
-          <div className="max-w-[89vw] flex justify-center flex-col items-center text-center">
+          <div className="relative max-w-[89vw] flex justify-center flex-col items-center text-center">
             <img src={profile} className="profilePhoto my-5" alt="" />
-            <h2 className="uppercase tracking-widest text-center text-xs text-blue-100">
+            <h2 className="relative uppercase tracking-widest text-center text-xs text-blue-100">
               <div className="h-[1rem] flex justify-center items-center px-4">
                 <div className="text-sm mx-auto font-normal text-neutral-400">
                   Building
@@ -60,12 +60,12 @@ const Hero = () => {
               words={"Hello, I'm Krishna Magar"}
             />
             <p
-              className="text-center text-sm md:text-lg lg:text-xl"
+              className="relative text-center  md:text-lg lg:text-xl text-zinc-400"
               style={{ maxWidth: '600px' }}
             >
-              I’m a third-year Computer Engineering student at Vishwakarma
-              Institute of Information Technology, Pune. A passionate Full Stack
-              Developer and AI & ML enthusiast.
+              I'm a passionate MERN stack developer, AI & ML enthusiast, and
+              hackathon participant, exploring DevOps and building impactful
+              real-world projects.
             </p>
             <div className="my-6 flex justify-center text-center">
               <HashLink to={'#contact'} smooth>

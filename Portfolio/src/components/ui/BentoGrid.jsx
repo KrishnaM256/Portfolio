@@ -11,7 +11,7 @@ export const BentoGrid = ({ className, children }) => {
   return (
     <div
       className={cn(
-        'grid grid-cols-1 md:grid-cols-4 gap-4 max-w-7xl mx-auto bg-[#1a1a1a] p-4 rounded-lg',
+        'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto bg-[#1a1a1a] p-4 rounded-lg',
         className
       )}
     >
@@ -69,9 +69,9 @@ export const BentoGridItem = ({
                 <HoverBorderGradient
                   containerClassName="rounded-full"
                   as="button"
-                  className="bg-black-200 relative text-white flex items-center space-x-2 "
+                  className="bg-black-200 relative text-white justify-center flex items-center space-x-2 "
                 >
-                  <MdOutlineFileDownload /> Download CV
+                  <MdOutlineFileDownload /> <span>Download CV</span>
                 </HoverBorderGradient>
               </a>
             </div>
@@ -93,7 +93,7 @@ export const BentoGridItem = ({
               </h3>
             )}
             {description && (
-              <p className="text-neutral-400 text-lg">{description}</p>
+              <p className="text-gray-300 text-lg">{description}</p>
             )}
           </div>
           {/* Icon */}

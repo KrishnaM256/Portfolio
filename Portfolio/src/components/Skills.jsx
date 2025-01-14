@@ -12,31 +12,41 @@ import {
 } from 'react-icons/fa'
 import { TbBrandCpp } from 'react-icons/tb'
 import { FaC } from 'react-icons/fa6'
-import { SiExpress, SiMongodb, SiMysql, SiTailwindcss } from 'react-icons/si'
+import {
+  SiExpress,
+  SiMongodb,
+  SiMysql,
+  SiTailwindcss,
+  SiRedux,
+} from 'react-icons/si'
 
 const Skills = () => {
   const skills = [
-    { skill: 'React', icon: FaReact },
-    { skill: 'C++', icon: TbBrandCpp },
-    { skill: 'C', icon: FaC },
-    { skill: 'Python', icon: FaPython },
-    { skill: 'Java', icon: FaJava },
-    { skill: 'JavaScript', icon: FaJs },
-    { skill: 'Node.Js ', icon: FaNodeJs },
-    { skill: 'express.js', icon: SiExpress },
-    { skill: 'MongoDB', icon: SiMongodb },
-    { skill: 'MySQL', icon: SiMysql },
     { skill: 'HTML5', icon: FaHtml5 },
     { skill: 'CSS', icon: FaCss3 },
-    { skill: 'GitHub', icon: FaGithub },
+    { skill: 'JavaScript', icon: FaJs },
+    { skill: 'React', icon: FaReact },
+    { skill: 'Redux', icon: SiRedux },
+    { skill: 'Node.js', icon: FaNodeJs },
+    { skill: 'Express.js', icon: SiExpress },
+    { skill: 'MongoDB', icon: SiMongodb },
+    { skill: 'MySQL', icon: SiMysql },
     { skill: 'Tailwind CSS', icon: SiTailwindcss },
+    { skill: 'GitHub', icon: FaGithub },
+    { skill: 'Python', icon: FaPython },
+    { skill: 'Java', icon: FaJava },
+    { skill: 'C++', icon: TbBrandCpp },
+    { skill: 'C', icon: FaC },
   ]
+
   return (
-    <section id="skills">
+    <section
+      id="skills"
+      className="relative flex flex-col justify-center items-center lg:w-[88%] w-full"
+    >
       <h2 className="text-4xl my-5 mt-12 text-center text-white">My Skills</h2>
-      <div className="w-[80rem]">
-        <HoverEffect items={skills} />
-      </div>
+
+      <HoverEffect items={skills} />
     </section>
   )
 }

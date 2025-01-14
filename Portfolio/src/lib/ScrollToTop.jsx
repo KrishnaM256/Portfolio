@@ -2,13 +2,13 @@ import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
 const ScrollToTop = () => {
-  const { pathname } = useLocation()
+  const { pathname, hash } = useLocation()
 
   useEffect(() => {
-    window.scrollTo(0, 0) // Scroll to the top of the page
-  }, [pathname]) // Run whenever the route changes
+    if (!hash) window.scrollTo(0, 0)
+  }, [pathname])
 
-  return null // This component doesn't render anything
+  return null
 }
 
 export default ScrollToTop

@@ -1,73 +1,9 @@
 import React from 'react'
-import CropMate1 from './../assets/CropMate1.png'
 import { PinContainer } from './ui/3d-pin'
-import {
-  FaReact,
-  FaPython,
-  FaJava,
-  FaJs,
-  FaNodeJs,
-  FaHtml5,
-  FaCss3,
-  FaGithub,
-} from 'react-icons/fa'
-import { TbBrandCpp } from 'react-icons/tb'
-import { FaC } from 'react-icons/fa6'
-import { SiExpress, SiMongodb, SiMysql, SiTailwindcss } from 'react-icons/si'
 import { GoArrowUpRight } from 'react-icons/go'
+import { projects } from '../data/projects'
 
 const Projects = () => {
-  const projects = [
-    {
-      id: 1,
-      title: 'CropMate- Contract Farming System',
-      description:
-        'This is assured contract farming system. Tech stack - MongoDB, Express.js, React.js, Node.js',
-      image: CropMate1,
-      link: '/project/1',
-      iconLists: [<SiMongodb />, <SiExpress />, <FaReact />, <FaNodeJs />],
-    },
-    {
-      id: 2,
-      title: 'CropMate- Contract Farming System',
-      description:
-        'This is assured contract farming system. Tech stack - MongoDB, Express.js, React.js, Node.js',
-      image: CropMate1,
-      link: '/project/1',
-    },
-    {
-      id: 3,
-      title: 'CropMate- Contract Farming System',
-      description:
-        'This is assured contract farming system. Tech stack - MongoDB, Express.js, React.js, Node.js',
-      image: CropMate1,
-      link: '/project/1',
-    },
-    {
-      id: 4,
-      title: 'CropMate- Contract Farming System',
-      description:
-        'This is assured contract farming system. Tech stack - MongoDB, Express.js, React.js, Node.js This is assured contract farming system. Tech stack - MongoDB, Express.js, React.js, Node.js',
-      image: CropMate1,
-      link: '/project/1',
-    },
-    {
-      id: 5,
-      title: 'CropMate- Contract Farming System',
-      description:
-        'This is assured contract farming system. Tech stack - MongoDB, Express.js, React.js, Node.js',
-      image: CropMate1,
-      link: '/project/1',
-    },
-    {
-      id: 6,
-      title: 'CropMate- Contract Farming System',
-      description:
-        'This is assured contract farming system. Tech stack - MongoDB, Express.js, React.js, Node.js',
-      image: CropMate1,
-      link: '/project/1',
-    },
-  ]
   return (
     <section id="projects">
       <h2 className="text-4xl mb-5 mt-12 text-center text-white">Projects</h2>
@@ -97,12 +33,12 @@ const Projects = () => {
                 </p>
                 <div className="flex items-center justify-between mt-7 mb-3">
                   <div className="flex items-center h-[15px]">
-                    {iconLists?.map((icon) => (
+                    {iconLists?.map((Icon) => (
                       <div
-                        key={icon}
+                        key={Icon}
                         className="border flex justify-center items-center border-white/[0.2] gap-2 rounded-full p-2 bg-transparent lg:w-10 lg:h-10 w-8 h-8"
                       >
-                        {icon}
+                        <Icon />
                       </div>
                     ))}
                   </div>
