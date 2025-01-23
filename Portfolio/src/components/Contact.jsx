@@ -402,11 +402,11 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        process.env.EMAILJS_SERVICE_ID, // Fetching from environment variables
-        process.env.EMAILJS_TEMPLATE_ID, // Fetching from environment variables
+        import.meta.env.VITE_EMAILJS_SERVICE_ID, // Fetching from environment variables
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID, // Fetching from environment variables
         form.current,
         {
-          publicKey: process.env.EMAILJS_PUBLIC_KEY, // Fetching from environment variables
+          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY, // Fetching from environment variables
         }
       )
       .then(
