@@ -28,7 +28,7 @@ const Navbar = () => {
         </HashLink>
       </ul>
 
-      <div class="relative inline-block text-left lg:hidden">
+      <div className="relative inline-block text-left lg:hidden">
         <div>
           {!toggle ? (
             <IoMenu onClick={() => setToggle(true)} className="text-3xl" />
@@ -38,13 +38,13 @@ const Navbar = () => {
         </div>
         {toggle && (
           <div
-            class="absolute right-0 z-10 mt-2 px-7 py-3 rounded-xl origin-top-right rounded-md bg-zinc-700  shadow-lg ring-1 ring-black/5 focus:outline-none"
+            className="absolute right-0 z-10 mt-2 px-7 py-3 rounded-xl origin-top-right rounded-md bg-zinc-700  shadow-lg ring-1 ring-black/5 focus:outline-none"
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="menu-button"
             tabindex="-1"
           >
-            <ul class="py-1" role="none">
+            <ul className="py-1" role="none">
               <HashLink
                 to={'/#about'}
                 className="block px-4 py-2 text-[16px] hover:text-white"

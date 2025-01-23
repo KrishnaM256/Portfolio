@@ -30,7 +30,7 @@ const About = () => {
       titleClassName: 'justify-start text-teal-400 text-center sm:text-left', // Responsive text alignment
     },
     {
-      title: '5+ Projects',
+      title: '3+ Projects',
       description: `Built innovative solutions using the MERN stack, and Python.`,
       id: 4,
       className: 'col-span-4 sm:col-span-2 md:col-span-3 lg:col-span-1',
@@ -45,7 +45,7 @@ const About = () => {
       titleClassName: 'justify-start text-green-400 text-center sm:text-left',
     },
     {
-      title: '750+ Contributions',
+      title: '800+ Contributions',
       description:
         'Active engagement in coding platforms and personal projects.',
       id: 6,

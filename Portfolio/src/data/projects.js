@@ -23,9 +23,9 @@ import ShopNow3 from './../assets/shop-now-3.png'
 export const projects = [
   {
     id: 1,
-    title: 'CropMate: Assured Contract Farming System',
+    title: 'CropMate: Assured Contract Farming System 🌱✨',
     description:
-      'This is assured contract farming system. Tech stack - MongoDB, Express.js, React.js, Node.js',
+      'CropMate is a MERN-based Contract Farming System bridging farmers and buyers. It features secured contracts, real-time chat, group collaboration, milestone tracking, and multi-language support, ensuring transparency and efficiency. Eliminating middlemen, it empowers users with quality and trust. Tech stack - MongoDB, Express.js, React.js, Node.js',
     image: CropMate1,
     git: 'https://github.com/KrishnaM256/CropMate',
     images: [CropMate1],
