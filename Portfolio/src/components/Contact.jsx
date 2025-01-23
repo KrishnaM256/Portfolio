@@ -401,9 +401,14 @@ const Contact = () => {
     e.preventDefault()
 
     emailjs
-      .sendForm('service_0tzkhbs', 'template_h9xkvhj', form.current, {
-        publicKey: 'k5ZcP6m8WOhz0pg5X',
-      })
+      .sendForm(
+        process.env.EMAILJS_SERVICE_ID, // Fetching from environment variables
+        process.env.EMAILJS_TEMPLATE_ID, // Fetching from environment variables
+        form.current,
+        {
+          publicKey: process.env.EMAILJS_PUBLIC_KEY, // Fetching from environment variables
+        }
+      )
       .then(
         () => {
           console.log('SUCCESS!')
@@ -414,6 +419,7 @@ const Contact = () => {
       )
     e.target.reset()
   }
+
   return (
     <section id="contact" className="w-full relative mt-5">
       <h2 className="text-4xl my-5 mt-12 text-center text-white">Contact Me</h2>

@@ -12,6 +12,13 @@ import { TbBrandCpp } from 'react-icons/tb'
 import { FaC } from 'react-icons/fa6'
 import { SiExpress, SiMongodb, SiMysql, SiTailwindcss } from 'react-icons/si'
 import CropMate1 from './../assets/CropMate1.png'
+import CropMate2 from './../assets/CropMate2.png'
+import CropMate3 from './../assets/CropMate3.png'
+import CropMate4 from './../assets/CropMate4.png'
+import CropMate5 from './../assets/CropMate5.png'
+import CropMate6 from './../assets/CropMate6.png'
+import CropMate7 from './../assets/CropMate7.png'
+import CropMate8 from './../assets/CropMate8.png'
 import Aakar1 from './../assets/aakar1.png'
 import Aakar2 from './../assets/aakar2.png'
 import Aakar3 from './../assets/aakar3.png'
@@ -28,7 +35,16 @@ export const projects = [
       'CropMate is a MERN-based Contract Farming System bridging farmers and buyers. It features secured contracts, real-time chat, group collaboration, milestone tracking, and multi-language support, ensuring transparency and efficiency. Eliminating middlemen, it empowers users with quality and trust. Tech stack - MongoDB, Express.js, React.js, Node.js',
     image: CropMate1,
     git: 'https://github.com/KrishnaM256/CropMate',
-    images: [CropMate1],
+    images: [
+      CropMate1,
+      CropMate2,
+      CropMate3,
+      CropMate4,
+      CropMate5,
+      CropMate6,
+      CropMate7,
+      CropMate8,
+    ],
     iconLists: [SiMongodb, SiExpress, FaReact, FaNodeJs],
     link: '/project/1',
   },

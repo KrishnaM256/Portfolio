@@ -57,7 +57,7 @@ const Hero = () => {
               </div>
             </h2>
             <TextGenerateEffect
-              className="text-center text-[40px] md:text-4xl lg:text-5xl text-white sm:text-2xl"
+              className="text-center text-white sm:text-2xl"
               filter={false}
               words={"Hello, I'm Krishna Magar"}
               duration={2}
